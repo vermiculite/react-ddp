@@ -1,0 +1,33 @@
+{
+  "name": "react-ddp",
+  "version": "0.0.1",
+  "description": "ddp client component for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermiculite/react-ddp.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "ddp"
+  ],
+  "author": "seanowenhayes@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vermiculite/react-ddp/issues"
+  },
+  "homepage": "https://github.com/vermiculite/react-ddp#readme",
+  "dependencies": {
+    "ddp.js": "^2.1.0",
+    "react": "^0.14.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
+  }
+}
