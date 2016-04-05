@@ -4,7 +4,10 @@
   "description": "ddp client component for react native",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha --require test/setup --recursive",
+    "test-watch": "mocha --require test/setup --recursive --watch",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/setup --reporter dot --check-leaks test/ --recursive",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -23,10 +26,11 @@
   "homepage": "https://github.com/vermiculite/react-ddp#readme",
   "dependencies": {
     "ddp.js": "^2.1.0",
-    "react": "^0.14.7"
+    "faye-websocket": "^0.11.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3"
   }
