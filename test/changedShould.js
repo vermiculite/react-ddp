@@ -29,9 +29,11 @@ describe('changed', function() {
 
         let finalState = changed(initialState, message);
         let tasks = finalState.get('tasks');
-        let task = tasks.last();
+        let task = tasks.get('CA7nNBsdLnEQgS6PN');
         task.get('checked').should.equal(true);
-        task.get('_id').should.equal('CA7nNBsdLnEQgS6PN');
+        task.get('owner').should.equal('jHfvxvvw52wPRkkFW');
+        task.get('username').should.equal('sss');
+        task.get('checked').should.equal(true);
     });
 
 
