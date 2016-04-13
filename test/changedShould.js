@@ -17,13 +17,14 @@ describe('changed', function() {
             }
         };
         let initialState = Map({
-            tasks: List.of(Map({
-                _id: 'CA7nNBsdLnEQgS6PN',
-                text: 'asdjlkajd',
-                owner: 'jHfvxvvw52wPRkkFW',
-                username: 'sss',
-                checked: false
-            }))
+            tasks: Map({
+                'CA7nNBsdLnEQgS6PN': Map({
+                    text: 'asdjlkajd',
+                    owner: 'jHfvxvvw52wPRkkFW',
+                    username: 'sss',
+                    checked: false
+                })
+            })
         });
 
         let finalState = changed(initialState, message);
