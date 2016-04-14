@@ -1,8 +1,7 @@
 'use strict';
 
-let add = require('../lib/add');
+let add = require('../lib/added');
 let Map = require('immutable').Map;
-let List = require('immutable').List;
 
 describe('add', function() {
     
