@@ -26,7 +26,8 @@
   "homepage": "https://github.com/vermiculite/react-ddp#readme",
   "dependencies": {
     "ddp.js": "^2.1.0",
-    "immutable": "^3.7.6"
+    "immutable": "^3.7.6",
+    "redux": "^3.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

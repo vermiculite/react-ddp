@@ -15,7 +15,7 @@ describe('add', function() {
                owner: 'jHfvxvvw52wPRkkFW',
                username: 'sss'
            }
-       }
+       };
        let initialState = Map();
        let finalState = add(initialState, message);
        let tasks = finalState.get('tasks');

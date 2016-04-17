@@ -11,7 +11,7 @@ describe('reducer', function() {
 
         const initialState = Map();
         let message = {
-            msg: 'added',
+            type: 'added',
             collection: 'tasks',
             id: 'CA7nNBsdLnEQgS6PN',
             fields: {
@@ -33,7 +33,7 @@ describe('reducer', function() {
 
     it('should handle change', function() {
         let message = {
-            msg: "changed",
+            type: "changed",
             collection: "tasks",
             id: "CA7nNBsdLnEQgS6PN",
             fields: {
@@ -63,7 +63,7 @@ describe('reducer', function() {
     it('should handle connected', function() {
         let initialState = Map();
         let message = {
-            msg: "connect",
+            type: "connect",
             session: "CvWX3qmqShaFR5cHN",
             version: "1",
             support: ["1", "pre2", "pre1"]
@@ -72,12 +72,12 @@ describe('reducer', function() {
         finalState.get('connected').get('session').should.equal('CvWX3qmqShaFR5cHN');
         finalState.get('connected').get('version').should.equal('1');
         finalState.get('connected').get('support').should.deep.equal(List.of("1", "pre2", "pre1"));
-        should.not.exist(finalState.get('connected').get('msg'));
+        should.not.exist(finalState.get('connected').get('type'));
     });
 
     it('should handle disconnected', function() {
         let message = {
-            msg: 'disconnected'
+            type: 'disconnected'
         };
         let initialState = fromJS({
             connected: {
@@ -93,7 +93,7 @@ describe('reducer', function() {
     it('should handle nosub', function() {
 
         let message = {
-            msg: 'nosub',
+            type: 'nosub',
             id: 'DAfzurvAurhcmXYGD',
             error: {
                 error: 404,
@@ -116,7 +116,7 @@ describe('reducer', function() {
 
     it('should handle ready', function() {
         let message = {
-            msg: "ready",
+            type: "ready",
             subs: ["DAfzurvAurhcmXYGD"]
         };
 
@@ -130,7 +130,7 @@ describe('reducer', function() {
 
     it('should handle removed', function() {
         let message = {
-            msg: "removed",
+            type: "removed",
             collection: "jobs",
             id: "uedz8g5uZgJbskXQP"
         }

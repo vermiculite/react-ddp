@@ -18,6 +18,6 @@ describe('connected', function () {
         finalState.get('connected').get('session').should.equal('CvWX3qmqShaFR5cHN');
         finalState.get('connected').get('version').should.equal('1');
         finalState.get('connected').get('support').should.deep.equal(List.of("1", "pre2", "pre1"));
-        should.not.exist(finalState.get('connected').get('msg'));
+        should.not.exist(finalState.get('connected').get('type'));
     });
 });
