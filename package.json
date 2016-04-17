@@ -1,7 +1,7 @@
 {
-  "name": "react-ddp",
+  "name": "redux-ddp",
   "version": "0.0.1",
-  "description": "ddp client component for react native",
+  "description": "ddp client component for redux",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require test/setup --recursive",
