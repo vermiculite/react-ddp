@@ -5,7 +5,9 @@ let disconnected = require('../lib/disconnected');
 describe('disconnected', function() {
     
     it('should update the state given a disconnect message', function() {
-        let message = {};
+        let message = {
+            msg: 'disconnected'
+        };
         let initialState = fromJS({
             connected: {
                 session: "CvWX3qmqShaFR5cHN",
